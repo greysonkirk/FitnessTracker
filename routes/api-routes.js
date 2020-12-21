@@ -36,10 +36,10 @@ module.exports = function(app) {
 
     });
 
-    //create workout
+
     app.post("/api/workouts", ({ body }, res) => {
         console.log("WORKOUT TO BE ADDED");
-        // console.log(body);
+
 
         db.Workout.create(body).then((dbWorkout => {
             res.json(dbWorkout);
